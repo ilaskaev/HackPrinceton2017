@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 import { MatModule } from 'app/mat/mat.module';
 import { RadarComponent } from './radar/radar.component';
 import { ChartsModule } from 'ng2-charts';
+import { AcuityComponent } from './acuity/acuity.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    RadarComponent
+    RadarComponent,
+    AcuityComponent
   ],
   imports: [
     BrowserModule,

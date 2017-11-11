@@ -8,60 +8,23 @@ import Chart from 'chart.js';
   styleUrls: ['./radar.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class RadarComponent implements OnInit {
-//   public radarChartLabels: string[] = [
-//     'Monochromatism', 'Dichromatism', 'Anomalous trichromatism', 'Tritanopia',
-//     'Deuteranopia', 'Protanopia'
-//   ];
-//   // PolarArea
-//   public polarAreaChartLabels: string[] = [
-//     'Monochromatism', 'Dichromatism', 'Anomalous trichromatism', 'Tritanopia',
-//     'Deuteranopia', 'Protanopia'
-//   ];
-//   public polarAreaChartData: number[] = [300, 500, 100, 40, 120, 200];
-//   public polarAreaLegend: boolean = true;
-
-//   public polarAreaChartType: string = 'polarArea';
+export class RadarComponent {
   constructor() {}
 
-  ngOnInit() {
-    var ctx = document.getElementById("myChart");
-    var myChart = new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-            datasets: [{
-                label: '# of Votes',
-                data: [12, 19, 3, 5, 2, 3],
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)'
-                ],
-                borderColor: [
-                    'rgba(255,99,132,1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)'
-                ],
-                borderWidth: 1
-            }]
-        },
-        options: {
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero:true
-                    }
-                }]
-            }
-        }
-    });
+  public options: any = {
+    layout: {padding: {left: 0, right: 0, top: 0, bottom: 25}},
+    responsive: true,
+    maintainAspectRatio: true,
+    scale: {ticks: {max: 100}}
+  };
 
-  }
+  // PolarArea
+  public polarAreaChartLabels: string[] = [
+    'Protanopia', 'Dichromatism', 'Anomalous trichromatism', 'Tritanopia',
+    'Deuteranopia', 'Monochromatism'
+  ];
+  public polarAreaChartData: number[] = [90, 20, 20, 40, 0, 0];
+  public polarAreaLegend = true;
+
+  public polarAreaChartType = 'polarArea';
 }
