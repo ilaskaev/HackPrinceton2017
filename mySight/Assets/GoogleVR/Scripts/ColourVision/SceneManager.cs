@@ -1,6 +1,7 @@
 ﻿// Taken right from the GoogleVr.Demos DemoSceneManager.cs
 
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SceneManager : MonoBehaviour {
 
@@ -17,4 +18,9 @@ public class SceneManager : MonoBehaviour {
             Application.Quit();
         }
 	}
+
+    public void ChangeSceneTo(string name)
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName: name);
+    }
 }
