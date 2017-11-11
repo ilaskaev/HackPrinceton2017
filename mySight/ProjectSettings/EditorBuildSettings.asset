@@ -6,8 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/main-menu.unity
+    path: Assets/GoogleVR/Scenes/main-menu.unity
     guid: 3ecee1e94c9eae84bb6ed2e15af3a3dd
   - enabled: 1
-    path: Assets/Scenes/visual-acuity.unity
+    path: Assets/GoogleVR/Scenes/visual-acuity.unity
     guid: 1760262a7bdd02c40bdc7d93e4a706f8
+  - enabled: 1
+    path: Assets/GoogleVR/Scenes/colour-vision.unity
+    guid: 44531cd0656fccc40af6cf282db4bf49
