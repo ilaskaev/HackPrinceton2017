@@ -18,7 +18,7 @@ namespace GoogleVR.GVRDemo {
 
   /// Demonstrates the use of GvrHeadset events and APIs.
   public class HeadsetDemoManager : MonoBehaviour {
-    public bool enableDebugLog = true;
+    public bool enableDebugLog = false;
     private WaitForSeconds waitFourSeconds = new WaitForSeconds(4);
 
 #region STANDALONE_DELEGATES

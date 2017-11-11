@@ -873,9 +873,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Continue
-
-'
+  m_Text: Get Started
 --- !u!222 &472457042
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2721,7 +2719,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1608067995
 MonoBehaviour:
   m_ObjectHideFlags: 0
