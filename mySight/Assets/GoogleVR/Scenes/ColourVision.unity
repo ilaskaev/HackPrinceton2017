@@ -603,7 +603,7 @@ MonoBehaviour:
   materials:
   - {fileID: 2100000, guid: 22cb9e69b83fcf64b9210deb6eae7ab0, type: 2}
   - {fileID: 2100000, guid: 29a7cb883ee25ef418aef71e6fc69b0b, type: 2}
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 8f3093b18808119459912936676dc59f, type: 2}
   plate: {fileID: 924447467}
 --- !u!4 &884605260
 Transform:
