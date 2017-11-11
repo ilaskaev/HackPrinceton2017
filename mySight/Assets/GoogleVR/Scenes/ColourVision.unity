@@ -1665,18 +1665,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 948600927}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 528214874}
-        m_MethodName: ContinuePressed
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &948600927
@@ -2361,8 +2350,6 @@ MonoBehaviour:
   controllerMain: {fileID: 948062591}
   controllerPointer: {fileID: 1842252992}
   reticlePointer: {fileID: 1699780157}
-  messageCanvas: {fileID: 0}
-  messageText: {fileID: 0}
   gvrEmulatedPlatformType: 0
 --- !u!4 &1394954094
 Transform:
