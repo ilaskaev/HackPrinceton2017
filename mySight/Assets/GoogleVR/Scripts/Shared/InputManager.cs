@@ -64,9 +64,6 @@ public class InputManager : MonoBehaviour
     public GameObject reticlePointer;
     public static string RETICLE_POINTER_PROP_NAME = "reticlePointer";
 
-    public GameObject messageCanvas;
-    public Text messageText;
-
 #if !RUNNING_ON_ANDROID_DEVICE
     public enum EmulatedPlatformType
     {
@@ -83,16 +80,6 @@ private GvrSettings.ViewerPlatformType viewerPlatform;
 
     void Start()
     {
-        if (messageCanvas == null)
-        {
-            messageCanvas = transform.Find(MESSAGE_CANVAS_NAME).gameObject;
-            if (messageCanvas != null)
-            {
-                messageText = messageCanvas.transform.Find(MESSAGE_TEXT_NAME).GetComponent<Text>();
-            }
-        }
-        // Message canvas will be enabled later when there's a message to display.
-        messageCanvas.SetActive(false);
 #if !RUNNING_ON_ANDROID_DEVICE
         if (playerSettingsHasDaydream() || playerSettingsHasCardboard())
         {
@@ -223,21 +210,13 @@ private static bool IsDeviceDaydreamReady() {
 
     private void UpdateStatusMessage()
     {
-        if (messageText == null || messageCanvas == null)
-        {
-            return;
-        }
 
 #if !UNITY_ANDROID && !UNITY_IOS
-    messageText.text = NON_GVR_PLATFORM;
-    messageCanvas.SetActive(true);
     return;
 #else
 #if UNITY_EDITOR
         if (!UnityEditor.PlayerSettings.virtualRealitySupported)
         {
-            messageText.text = VR_SUPPORT_NOT_CHECKED;
-            messageCanvas.SetActive(true);
             return;
         }
 #endif  // UNITY_EDITOR
@@ -245,18 +224,11 @@ private static bool IsDeviceDaydreamReady() {
         bool isVrSdkListEmpty = !playerSettingsHasCardboard() && !playerSettingsHasDaydream();
         if (!isDaydream)
         {
-            if (messageCanvas.activeSelf)
-            {
-                messageText.text = EMPTY_VR_SDK_WARNING_MESSAGE;
-                messageCanvas.SetActive(isVrSdkListEmpty);
-            }
             return;
         }
 
         string vrSdkWarningMessage = isVrSdkListEmpty ? EMPTY_VR_SDK_WARNING_MESSAGE : "";
         string controllerMessage = "";
-        GvrPointerGraphicRaycaster graphicRaycaster =
-            messageCanvas.GetComponent<GvrPointerGraphicRaycaster>();
         // This is an example of how to process the controller's state to display a status message.
         switch (GvrControllerInput.State)
         {
@@ -264,33 +236,21 @@ private static bool IsDeviceDaydreamReady() {
                 break;
             case GvrConnectionState.Disconnected:
                 controllerMessage = CONTROLLER_DISCONNECTED_MESSAGE;
-                messageText.color = Color.white;
                 break;
             case GvrConnectionState.Scanning:
                 controllerMessage = CONTROLLER_SCANNING_MESSAGE;
-                messageText.color = Color.cyan;
                 break;
             case GvrConnectionState.Connecting:
                 controllerMessage = CONTROLLER_CONNECTING_MESSAGE;
-                messageText.color = Color.yellow;
                 break;
             case GvrConnectionState.Error:
                 controllerMessage = "ERROR: " + GvrControllerInput.ErrorDetails;
-                messageText.color = Color.red;
                 break;
             default:
                 // Shouldn't happen.
                 Debug.LogError("Invalid controller state: " + GvrControllerInput.State);
                 break;
         }
-        messageText.text = string.Format("{0}\n{1}", vrSdkWarningMessage, controllerMessage);
-        if (graphicRaycaster != null)
-        {
-            graphicRaycaster.enabled =
-                !isVrSdkListEmpty || GvrControllerInput.State != GvrConnectionState.Connected;
-        }
-        messageCanvas.SetActive(isVrSdkListEmpty ||
-                                (GvrControllerInput.State != GvrConnectionState.Connected));
 #endif  // !UNITY_ANDROID && !UNITY_IOS
     }
 

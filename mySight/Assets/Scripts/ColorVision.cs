@@ -7,6 +7,6 @@ public class ColorVision : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        SceneManager.LoadScene("Color Vision");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Color Vision");
 	}
 }
