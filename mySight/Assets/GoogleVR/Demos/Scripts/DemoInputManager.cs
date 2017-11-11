@@ -81,7 +81,8 @@ namespace GoogleVR.Demos {
 
     void Start() {
       if (messageCanvas == null) {
-        messageCanvas = transform.Find(MESSAGE_CANVAS_NAME).gameObject;
+        return;
+        // messageCanvas = transform.Find(MESSAGE_CANVAS_NAME).gameObject;
         if (messageCanvas != null) {
           messageText = messageCanvas.transform.Find(MESSAGE_TEXT_NAME).GetComponent<Text>();
         }
