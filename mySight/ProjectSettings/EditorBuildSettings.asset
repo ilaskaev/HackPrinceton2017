@@ -17,9 +17,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/GoogleVR/Scenes/visual-field-mapping.unity
     guid: db6a888aaf3dae74da36c5aa314b830c
-<<<<<<< Updated upstream
   - enabled: 1
     path: Assets/GoogleVR/Scenes/stereopsis.unity
     guid: 872fb632502bf9a4e8333c230b58b750
-=======
->>>>>>> Stashed changes
