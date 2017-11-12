@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -505,6 +505,7 @@ GameObject:
   - component: {fileID: 531584404}
   - component: {fileID: 531584403}
   - component: {fileID: 531584402}
+  - component: {fileID: 531584405}
   m_Layer: 0
   m_Name: Visual Field Mapping
   m_TagString: Untagged
@@ -616,6 +617,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 531584400}
+--- !u!114 &531584405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 531584400}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c3ddb145cf14fd408f01b5db54e994a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &551719486
 Prefab:
   m_ObjectHideFlags: 0
@@ -1083,7 +1095,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1048465834}
   m_Enabled: 0
   m_EditorHideFlags: 0
+<<<<<<< Updated upstream
   m_Script: {fileID: 11500000, guid: 4b13e58feced044459b1e6dad91d3b33, type: 3}
+=======
+  m_Script: {fileID: 11500000, guid: 3c3ddb145cf14fd408f01b5db54e994a, type: 3}
+>>>>>>> Stashed changes
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1145061474
