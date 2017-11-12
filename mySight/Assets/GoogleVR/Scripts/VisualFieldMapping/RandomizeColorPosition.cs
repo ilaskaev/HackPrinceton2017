@@ -21,6 +21,7 @@ public class RandomizeColorPosition : MonoBehaviour {
     public GameObject instructionCanvas;
     public GameObject taskCanvas;
     public GameObject finalCanvas;
+    public GameObject cubeRoom;
 
     // Use this for initialization
     void Start () {
@@ -72,6 +73,7 @@ public class RandomizeColorPosition : MonoBehaviour {
         instructionCanvas.SetActive(false);
         taskCanvas.SetActive(false);
         finalCanvas.SetActive(true);
+        cubeRoom.SetActive(true);
     }
 
 }

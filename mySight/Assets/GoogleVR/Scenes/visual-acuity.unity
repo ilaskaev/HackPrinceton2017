@@ -1328,9 +1328,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: This test will test your visual acuity using a Snellen Chart. Read the letters
-    from top to bottom and record your responses. Hit "Finish" at the bottom and compare
-    your results.
+  m_Text: Welcome to the visual acuity test. This test will gauge your visual acuity
+    using a Snellen chart. Read the letters from top to bottom and record your responses.
+    Hit "Finish" at the bottom and compare your results.
 --- !u!222 &1424043723
 CanvasRenderer:
   m_ObjectHideFlags: 0

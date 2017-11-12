@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class VisualFieldMapping : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("visual-field-mapping");	
-	}
+    // Use this for initialization
+    void Start() {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("visual-field-mapping");
+    }
 }
