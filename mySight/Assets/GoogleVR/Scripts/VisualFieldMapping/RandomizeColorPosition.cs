@@ -16,7 +16,8 @@ public class RandomizeColorPosition : MonoBehaviour {
     private Vector3 pos;
     private float nextFlash;
     private float flashRate;
-
+    private float min;
+    private float max;
 
     public GameObject instructionCanvas;
     public GameObject taskCanvas;
@@ -25,6 +26,8 @@ public class RandomizeColorPosition : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        min = 100;
+        max = 200;
         count = 0;
         maxCount = 10;
         flashRate = 2; // in seconds
@@ -50,9 +53,9 @@ public class RandomizeColorPosition : MonoBehaviour {
             return;
         }
         
-        z = 0;
-        x = Random.Range(50, 160);
-        y = Random.Range(50, 160);
+        z = 3;
+        x = Random.Range(min, max);
+        y = Random.Range(min, max);
 
         plusOrMinus = Random.Range(0, 2) < 0.5 ? -1 : 1;
         x = x * plusOrMinus;
@@ -70,6 +73,8 @@ public class RandomizeColorPosition : MonoBehaviour {
 
     public void Finish()
     {
+        count = 0;
+
         instructionCanvas.SetActive(false);
         taskCanvas.SetActive(false);
         finalCanvas.SetActive(true);
