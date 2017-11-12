@@ -7,6 +7,7 @@ import { RadarComponent } from './radar/radar.component';
 import { ChartsModule } from 'ng2-charts';
 import { AcuityComponent } from './acuity/acuity.component';
 import { VisualFieldComponent } from './visual-field/visual-field.component';
+import { StereopsisComponent } from './stereopsis/stereopsis.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { VisualFieldComponent } from './visual-field/visual-field.component';
     AppComponent,
     RadarComponent,
     AcuityComponent,
-    VisualFieldComponent
+    VisualFieldComponent,
+    StereopsisComponent
   ],
   imports: [
     BrowserModule,

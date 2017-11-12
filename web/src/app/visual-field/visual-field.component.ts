@@ -20,8 +20,8 @@ export class VisualFieldComponent {
   };
 
   public radarChartData: any = [
-    {data: [100, 100, 90, 100, 100, 85, 100, 100], label: 'Left Eye'},
-    {data: [60, 75, 100, 100, 100, 100, 100, 75], label: 'Right Eye'}
+    {data: [100, 100, 85, 100, 100, 100, 100, 90], label: 'Left Eye'},
+    {data: [100, 100, 100, 100, 75, 60, 75, 100], label: 'Right Eye'}
   ];
   public radarChartType = 'radar';
 }
