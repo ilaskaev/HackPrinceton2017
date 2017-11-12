@@ -8,13 +8,17 @@ import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 })
 export class StereopsisComponent {
   public barChartOptions:
-      any = {scaleShowVerticalLines: false, responsive: true};
-  public barChartLabels: string[] =
-      ['Correct', 'Incorrect'];
+      any = {scaleShowVerticalLines: true, responsive: false};
+
+  public options: any = {
+    scaleShowVerticalLines: false, responsive: true,
+    layout: {padding: {left: 0, right: 0, top: 0, bottom: 25}},
+    maintainAspectRatio: true,
+    scale: {ticks: {max: 100, min: 0}}
+  };
+  public barChartLabels: string[] = ['Correct', 'Incorrect'];
   public barChartType = 'bar';
   public barChartLegend = true;
 
-  public barChartData: any[] = [
-    {data: [9, 1], label: 'Depth Classification'}
-  ];
+  public barChartData: any[] = [{data: [9, 1], label: 'Depth Classification'}];
 }
