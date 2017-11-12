@@ -68,7 +68,7 @@ public class CubeManager : MonoBehaviour {
             results.text = "Out of " + numTests + " attempts, you successfully chose the closer cube " + correct + " times!";
             if (correct == 5)
             {
-                results.text += "\nYou're depth perception is spot on! Feel free to try again and bask in the glory of knowing you have exception depth perception.";
+                results.text += "\nYour depth perception is spot on! Feel free to try again and bask in the glory of knowing you have exception depth perception.";
             } else if (correct >= 3)
             {
                 results.text += "\nYou're depth perception is lagging behind a bit. Maybe it was a bad day, you should try again!";
