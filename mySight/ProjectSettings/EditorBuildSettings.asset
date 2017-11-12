@@ -14,9 +14,3 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/GoogleVR/Scenes/colour-vision.unity
     guid: 44531cd0656fccc40af6cf282db4bf49
-  - enabled: 1
-    path: Assets/GoogleVR/Scenes/visual-field-mapping.unity
-    guid: db6a888aaf3dae74da36c5aa314b830c
-  - enabled: 1
-    path: Assets/GoogleVR/Scenes/stereopsis.unity
-    guid: 872fb632502bf9a4e8333c230b58b750
