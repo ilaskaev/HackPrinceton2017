@@ -34,4 +34,5 @@ We envision MySight as a general platform for diagnosing our eyes’ health, and
 ![Stereopsis Test](./images/2.jpg "Stereopsis Test")
 
 > Visual Acuity Test
+
 ![Visual Acuity Test](./images/3.jpg "Visual Acuity Test")
